@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/cita", headers = "Accept=Application/json")
+@RequestMapping(value = "/api/cita")
 public class CitaRestController {
     @Autowired
     ICitaService citaService;
@@ -27,7 +27,7 @@ public class CitaRestController {
         citaNuevo.setFactura(cita.getFactura());
         citaNuevo.setFecha(cita.getFecha());
         citaNuevo.setPaciente(cita.getPaciente());
-        citaNuevo.setListaDoctores(cita.getListaDoctores());
+        citaNuevo.setDoctor(cita.getDoctor());
         return citaService.crearCita(citaNuevo);
     }
 
@@ -45,7 +45,7 @@ public class CitaRestController {
         cita.setFactura(citaActualizar.getFactura());
         cita.setFecha(citaActualizar.getFecha());
         cita.setPaciente(citaActualizar.getPaciente());
-        cita.setListaDoctores(citaActualizar.getListaDoctores());
+        cita.setDoctor(citaActualizar.getDoctor());
         return citaService.actualizarCita(citaActualizar.getId(), cita);
     }
 

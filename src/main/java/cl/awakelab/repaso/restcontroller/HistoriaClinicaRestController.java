@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/historiaclinica", headers = "Accept=Application/json")
+@RequestMapping(value = "/api/historiaClinica", headers = "Accept=Application/json")
 public class HistoriaClinicaRestController {
     @Autowired
     IHistoriaClinicaService historiaClinicaService;
@@ -25,7 +25,7 @@ public class HistoriaClinicaRestController {
         HistoriaClinica historiaClinicaNueva = new HistoriaClinica();
         historiaClinicaNueva.setId(historiaClinica.getId());
         historiaClinicaNueva.setPaciente(historiaClinica.getPaciente());
-        historiaClinicaNueva.setListaDoctores(historiaClinica.getListaDoctores());
+        historiaClinicaNueva.setDoctor(historiaClinica.getDoctor());
         historiaClinicaNueva.setSintomas(historiaClinica.getSintomas());
         historiaClinicaNueva.setDiagnostico(historiaClinica.getDiagnostico());
         historiaClinicaNueva.setTratamiento(historiaClinica.getTratamiento());
@@ -43,7 +43,7 @@ public class HistoriaClinicaRestController {
     public HistoriaClinica actualizarHistoriaClinica(@RequestBody HistoriaClinica historiaClinicaActualizar, @PathVariable int id) {
         HistoriaClinica historiaClinica = historiaClinicaService.buscarHistoriaClinicaPorId(id);
         historiaClinica.setPaciente(historiaClinicaActualizar.getPaciente());
-        historiaClinica.setListaDoctores(historiaClinicaActualizar.getListaDoctores());
+        historiaClinica.setDoctor(historiaClinicaActualizar.getDoctor());
         historiaClinica.setSintomas(historiaClinicaActualizar.getSintomas());
         historiaClinica.setDiagnostico(historiaClinicaActualizar.getDiagnostico());
         historiaClinica.setTratamiento(historiaClinicaActualizar.getTratamiento());

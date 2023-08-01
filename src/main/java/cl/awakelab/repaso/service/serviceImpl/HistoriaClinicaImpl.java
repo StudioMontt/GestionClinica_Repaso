@@ -34,7 +34,7 @@ public class HistoriaClinicaImpl implements IHistoriaClinicaService {
         HistoriaClinica historiaClinica = historiaClinicaRepo.findById(id).orElseThrow(() -> new NoSuchElementException("La Historia Clínica no fue encontrada"));
         historiaClinica.setId(historiaClinicaActualizar.getId());
         historiaClinica.setPaciente(historiaClinicaActualizar.getPaciente());
-        historiaClinica.setListaDoctores(historiaClinicaActualizar.getListaDoctores());
+        historiaClinica.setDoctor(historiaClinicaActualizar.getDoctor());
         historiaClinica.setSintomas(historiaClinicaActualizar.getSintomas());
         historiaClinica.setDiagnostico(historiaClinicaActualizar.getDiagnostico());
         historiaClinica.setTratamiento(historiaClinicaActualizar.getTratamiento());

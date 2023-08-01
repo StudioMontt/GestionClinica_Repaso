@@ -3,7 +3,7 @@ package cl.awakelab.repaso.algoritms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
         List<Detalles> detalles = new ArrayList<>();
         CalculoEdad calculoEdad = new CalculoEdad();

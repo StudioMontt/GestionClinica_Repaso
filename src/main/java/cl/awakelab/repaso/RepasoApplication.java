@@ -1,4 +1,4 @@
-package c.awakelab.repaso;
+package cl.awakelab.repaso;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

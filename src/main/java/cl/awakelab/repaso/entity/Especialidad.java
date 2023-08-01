@@ -1,7 +1,9 @@
 package cl.awakelab.repaso.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -17,6 +19,8 @@ public class Especialidad {
     @Column(length = 100)
     private String nombre;
 
+    //    @JsonIgnore
     @OneToMany(mappedBy = "especialidad")
+//    @ToString.Exclude
     private List<Doctor> listaDoctores;
 }

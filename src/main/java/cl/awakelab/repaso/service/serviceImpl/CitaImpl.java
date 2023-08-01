@@ -36,7 +36,7 @@ public class CitaImpl implements ICitaService {
         cita.setFactura(citaActualizar.getFactura());
         cita.setFecha(citaActualizar.getFecha());
         cita.setPaciente(citaActualizar.getPaciente());
-        cita.setListaDoctores(citaActualizar.getListaDoctores());
+        cita.setDoctor(citaActualizar.getDoctor());
         return citaRepo.save(cita);
     }
 

@@ -1,7 +1,9 @@
 package cl.awakelab.repaso.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,6 +23,8 @@ public class Factura {
     @Column(name = "Fecha_Pago")
     private LocalDate fechaPago;
 
+    //    @JsonIgnore
     @OneToMany(mappedBy = "factura")
+//    @ToString.Exclude
     private List<Cita> listaCitas;
 }
